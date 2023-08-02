@@ -24,17 +24,17 @@ checkWin();
 }
 
 function checkWin() {
-let checkCells = document.querySelectorAll('[data-player="' + currentPlayer + '"]');
-let valueCells = Array.from(checkCells, cell => cell.getAttribute('data-cell'));
-let isFounded = winningCombinations.some(ai => {
-    return ai.every(cell => valueCells.includes(cell));
-});
-    let fullCells = document.querySelectorAll("[data-player]").length;
-        if (isFounded == true) {
-           winnerMessage.innerText = "You won this game!";
-        } else if (fullCells == 9) {
+    let checkCells = document.querySelectorAll('[data-player="' + currentPlayer + '"]');
+    let valueCells = Array.from(checkCells, cell => cell.getAttribute('data-cell'));
+    let isFounded = winningCombinations.some(ai => {
+        return ai.every(cell => valueCells.includes(cell));
+    });
+        let fullCells = document.querySelectorAll("[data-player]").length;
+            if (isFounded == true) {
+            winnerMessage.innerText = "You won this game!";
+            } else if (fullCells == 9) {
            winnerMessage.innerText = "Equality between players!";
-        }
+            }
 }
 
 function resetGame() {
@@ -42,7 +42,7 @@ function resetGame() {
         cellElements[i].innerText = '';
         cellElements[i].removeAttribute('data-player');
     }
-            currentPlayer = 'x';
-            winnerMessage.innerText = '';
+        currentPlayer = 'x';
+        winnerMessage.innerText = '';
 }
 });
