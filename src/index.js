@@ -20,7 +20,7 @@ checkWin();
 if (currentPlayer === 'x') {
     currentPlayer = '0';
     } else {
-        currentPlayer = 'x'
+    currentPlayer = 'x'
     }
 }
 
@@ -34,7 +34,7 @@ let fullCells = document.querySelectorAll("[data-player]").length;
     if (isFounded == true) {
       winnerMessage.innerText = currentPlayer + " " + "won this game!";
     } else if (fullCells == 9) {
-        winnerMessage.innerText = "Equality between players!";
+     winnerMessage.innerText = "Equality between players!";
     }
 }
 
